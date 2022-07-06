@@ -176,64 +176,173 @@
   @media only screen and (max-device-width: 600px)
                      and (max-device-width: 480px)
   {
-    
     .container{
-        width: 900px;
-        height: 1500px;
-        margin-top: 100px;
-       
-        
+      width: 650px;
+      height: 1300px;
+      margin: 15px;
+      background: #151515;
+      border: 4px solid rgba(51, 51, 51, 0.6);
+      box-shadow: 0px 4px 85px 42px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      display: flex;
+      flex-wrap:wrap;
+      align-content:flex-end;
+      
+    }
+   body{
+      display: flex;
+      justify-content: center;
+    }
+  
+   .keys{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-bottom: 20px;
+   }
+    #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #decimal, #negative, #percent{
+      margin: 4px;
+    width: 141px;
+    height: 150px;
+    background: #333333;
+    border: 3px solid #333333;
+    box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
+    border-radius: 150px;
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 42px;
+    line-height: 51px;
+    /* identical to box height */
+    color: #FFFFFF;
+    }
+    
+    #equals{
+      margin:4px;    
+      width: 141px;
+      height: 150px;
+      border-radius: 150px;
+      font-style: normal;
+      
+      font-size: 22px;
+      /* line-height: 75px; */
+      /* identical to box height */
+      
+      box-shadow: none;
+      color: #FFFFFF;
+    }
+    #divide, #multiply, #subtract, #add {
+      margin: 4px;
+    width: 141px;
+    height: 150px;
+    /* background: radial-gradient(213.48% 213.48% at 0% -32.02%, #FAFF00 0%, #FF00F5 100%) ; */
+    /* box-shadow: 5px 2px ; */
+    border-radius: 150px;
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    
+    font-size: 42px;
+    line-height: 75px;
+    /* identical to box height */
+    
+    box-shadow: none;
+    color: #FFFFFF;
+    
+    }
+    .input{
+      padding-left: 20px;
+      color: white;
+      font-size: 100px;
+    }
+  .result{
+    display: flex;
+    padding-left: 20px;
+    color: white;
+    font-size: 100px;
+  }
+    /* .input{
+      display:flex;
+    } */
+   
+  #clear{
+    width: 299px;
+    height: 150px;
+    padding-right: 30px;
+     
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    /* line-height: 51px; */
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    
+    background: #ce0f0f;
+    border: 3px solid #333333;
+    box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
+    border-radius: 150px;
+    }
+    #zero{
+      width: 450px;
+      height: 150px;
+      padding-left: 50px;
+       margin-top:5px;
+      text-align: left;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 62px;
+      /* line-height: 51px; */
+      /* identical to box height */
+      
+      
+      color: #FFFFFF;
+      
+      background: #333333;
+      border: 3px solid #333333;
+      box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
+      border-radius: 150px;
       }
-      .keys{
-        margin-left: 40px;
-        margin-bottom: 50px;
-        margin: 30px;
-     }
-     .result-number{
-        
-        padding-left: 50px;
-         
-        
-        }
-        #divide, #multiply, #subtract, #add, #equals, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #decimal, #negative, #percent{
-            margin: 4px;
-          width: 200px;
-          height: 200px;
-          /* background: radial-gradient(213.48% 213.48% at 0% -32.02%, #FAFF00 0%, #FF00F5 100%) ; */
-          /* box-shadow: 5px 2px ; */
-          border-radius: 150px;
-          font-family: 'Inter',sans-serif;
-          font-style: normal;
-          
-          font-size: 42px;
-          line-height: 75px;
-          /* identical to box height */
-          
-          box-shadow: none;
-          color: #FFFFFF;
-          
-          }
-          #clear{
-            margin: 4px;
-          width: 200px;
-          height: 200px;
-          background: #333333;
-          border: 3px solid #333333;
-          box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
-          border-radius: 150px;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 42px;
-          line-height: 51px;
-          /* identical to box height */
-          color: #FFFFFF;
-          }
-          #zero{
-            width: 400px;
-            height: 200px;
-            padding-left:40px;
-             
-           
-            }
+      
+    
+    .container-result{
+      /* margin-left: 328px; */
+      margin-right: 10px;
+      margin-bottom: 33px;
+    }
+    
+    .result-number{
+    width: 79px;
+    /* height: 103px; */
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 112px;
+    line-height: 136px;
+    color: #FFFFFF;
+    }
+    
+    
+    button {
+    
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #7f8188;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 3px #999;
+    }
+    
+    button:hover {background-color: #767a76}
+    
+    button:active {
+      background-color: #1e201e;
+      box-shadow: 0 1px #666;
+      transform: translateY(5px);
+    }
+  
    
   }
