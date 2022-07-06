@@ -193,7 +193,7 @@ const calcData = [
       return (
         <div className="container">
           <div className="calculator">
-            <Display input={input} output={output} />
+            <Display input={input} output={output}/> 
             <Keyboard handleInput={handleInput} />
           </div>
         </div>
