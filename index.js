@@ -1,26 +1,7 @@
 
 
-// const calcData= [
-// {id:"clear", value:"AC"},
-// {id:"divide", value:"/"},
-// {id:"multiply", value:"x"},
-// {id:"seven", value:7},
-// {id:"eight", value:8},
-// {id:"nine", value:9},
-// {id:"subtract", value:"-"},
-// {id:"four", value:4},
-// {id:"five", value:5},
-// {id:"six", value:6},
-// {id:"add", value:"+"},
-// {id:"one", value:1},
-// {id:"two", value:2},
-// {id:"three", value:3},
-// {id:"equals", value:"="},
-// {id:"zero", value:"0"},
-// {id:"decimal", value:"."},
 
-// ];
-const calcData = [
+const Inputs = [
     { id: "clear", value: "AC" },
     { id: "divide", value: "/" },
     { id: "multiply", value: "x" },
@@ -58,7 +39,7 @@ const calcData = [
     
     const Keyboard = ({ handleInput }) => (
       <div className="keys">
-        {calcData.map((key) => (
+        {Inputs.map((key) => (
           <Key key={key.id} keyData={key} handleInput={handleInput} />
         ))}
       </div>
@@ -69,21 +50,20 @@ const calcData = [
         const [output, setOutput] = React.useState("");
         const [calculatorData, setCalculatorData] = React.useState("");
     
-        const handleSubmit = () => {
-        console.log({ calculatorData });
-    
+        const Submit = () => {
+        
         const total = eval(calculatorData);
         setInput(total);
         setOutput(`${total} = ${total}`);
         setCalculatorData(`${total}`);
       };
     
-      const handleClear = () => {
+      const Clear = () => {
         setInput("0");
         setCalculatorData("");
       };
     
-      const handleNumbers = (value) => {
+      const Numbers = (value) => {
         if (!calculatorData.length) {
           setInput(`${value}`);
           setCalculatorData(`${value}`);
@@ -125,7 +105,7 @@ const calcData = [
       };
     
     
-      const handleOperators = (value) => {
+      const Operators = (value) => {
         if (calculatorData.length) {
           setInput(`${value}`);
           const beforeLastChat = calculatorData.charAt(calculatorData.length - 2);
@@ -163,31 +143,31 @@ const calcData = [
     
         switch (value) {
           case "=":
-            handleSubmit();
+            Submit();
             break;
           case "AC":
-            handleClear();
+            Clear();
             break;
           case number:
-            handleNumbers(value);
+            Numbers(value);
             break;
           case ".":
             dotOperator(value);
             break;
           case operator:
-            handleOperators(value);
+            Operators(value);
             break;
           default:
             break;
         }
       };
     
-      const handleOutput = () => {
+      const Output = () => {
         setOutput(calculatorData);
       };
     
       React.useEffect(() => {
-        handleOutput();
+        Output();
       }, [calculatorData]);
     
       return (

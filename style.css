@@ -99,6 +99,7 @@
   } */
  
 #clear{
+  background: rgb(214, 18, 18);
   width: 196px;
   height: 90px;
   padding-left: 30px;
@@ -114,7 +115,7 @@
   
   color: #FFFFFF;
   
-  background: #333333;
+  /* background: #333333; */
   border: 3px solid #333333;
   box-shadow: inset 4px 1px 17px 3px rgba(0, 0, 0, 0.22);
   border-radius: 150px;
@@ -217,7 +218,7 @@
     border-radius: 150px;
     font-style: normal;
     /* font-weight: 400; */
-    font-size: 42px;
+    font-size: 62px;
     line-height: 51px;
     /* identical to box height */
     color: #FFFFFF;
@@ -230,7 +231,7 @@
       border-radius: 150px;
       font-style: normal;
       
-      font-size: 22px;
+      font-size: 62px;
       /* line-height: 75px; */
       /* identical to box height */
       
@@ -247,7 +248,7 @@
     font-family: 'Inter',sans-serif;
     font-style: normal;
     
-    font-size: 42px;
+    font-size: 72px;
     line-height: 75px;
     /* identical to box height */
     
@@ -343,7 +344,7 @@
       box-shadow: 0 3px #999;
     }
     
-    button:hover {background-color: #767a76}
+    button:hover {background-color: #f1c13c}
     
     button:active {
       background-color: #1e201e;
